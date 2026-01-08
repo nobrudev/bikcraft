@@ -1,0 +1,78 @@
+.header-bg {
+  background-color: #000000;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; /*serve para quebrar o elemento quando nao houver mais espaco*/
+  gap: 20px; /*nao ira deixar grudar mais do que 20px ao arrastar a janela*/
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header-menu a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 16px 0px;
+  font-size: 18px;
+  position: relative;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.header-menu a::after {
+  /*se trata da criacao de um pseudo elemento onde sempre se define um tipo "content"*/
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  margin-top: 4px; /*serve para afastar um pouco mais o elemento do texto*/
+  transition: 0.3s; /*define o tempo da animacao deixando-a mais suave*/
+  position: absolute;
+}
+
+.header-menu a:hover:after {
+  /*serve para definir a transicao da animacao ao mexer do mouse*/
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  /*para mobile*/
+  .header-menu {
+    gap: 20px;
+  }
+  .header-menu a {
+    background: #111111;
+    padding: 12px 16px;
+    border-radius: 4px; /*adicona uma borda deixando o menu muito mais parecido com um botao*/
+  }
+  .header-menu a:hover {
+    /*define a acao ao passar o mouse por cima, tornando mais intuitivo para o usuario ao clicar*/
+    background-color: #2e2e2e;
+  }
+  .header a::after {
+    display: none; /*retira a animcao do menu para mobile*/
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
