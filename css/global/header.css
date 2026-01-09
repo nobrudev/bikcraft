@@ -1,5 +1,5 @@
 .header-bg {
-  background-color: #000000;
+  background-color: var(--cor-12);
 }
 
 .header {
@@ -22,13 +22,9 @@
 }
 
 .header-menu a {
-  color: #ffffff;
   display: inline-block;
   padding: 16px 0px;
-  font-size: 18px;
   position: relative;
-  font-family: "Montserrat";
-  font-weight: 400;
 }
 
 .header-menu a::after {
@@ -37,7 +33,7 @@
   display: block;
   height: 2px;
   width: 0%;
-  background: #ffffff;
+  background: var(--cor-0);
   margin-top: 4px; /*serve para afastar um pouco mais o elemento do texto*/
   transition: 0.3s; /*define o tempo da animacao deixando-a mais suave*/
   position: absolute;
@@ -54,13 +50,13 @@
     gap: 20px;
   }
   .header-menu a {
-    background: #111111;
+    background: var(--cor-11);
     padding: 12px 16px;
     border-radius: 4px; /*adicona uma borda deixando o menu muito mais parecido com um botao*/
   }
   .header-menu a:hover {
     /*define a acao ao passar o mouse por cima, tornando mais intuitivo para o usuario ao clicar*/
-    background-color: #2e2e2e;
+    background-color: var(--cor-10);
   }
   .header a::after {
     display: none; /*retira a animcao do menu para mobile*/
