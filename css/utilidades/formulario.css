@@ -6,7 +6,9 @@
 
 .form label {
   display: block;
-  font: 600 1rem/1.5 "Montserrat", sans-serif;
+  font:
+    400 1rem/1.5 "Montserrat",
+    sans-serif;
   margin-bottom: 4px; /*define a distancia entre cada um dos elementos*/
 }
 
@@ -17,7 +19,9 @@
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
-  font: 400 1rem/1.5 "Roboto", sans-serif;
+  font:
+    400 1rem/1.5 "Roboto",
+    sans-serif;
   background: var(--cor-1);
   border: 1px solid var(--cor-2);
   padding: 12px;
