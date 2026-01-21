@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
   <title>Orçamento - Bikcraft</title>
   <meta name="description" content="Orçamento">
@@ -140,6 +141,25 @@
         <div>
           <label for="estado">Estado</label>
           <input type="text" id="estado" name="estado">
+        </div>
+        <div>
+          <form id="meuFormulario">
+            <label>
+              <input type="checkbox" id="aceitoTermos">
+              Li e aceito os <a href="termos.html" target="_blank">termos e condições</a>
+            </label>
+            <br><br>
+          </form>
+
+          <script>
+            document.getElementById("meuFormulario").addEventListener("submit", function (event) {
+              const checkbox = document.getElementById("aceitoTermos");
+              if (!checkbox.checked) {
+                event.preventDefault(); // impede o envio
+                alert("Você precisa aceitar os termos e condições para continuar.");
+              }
+            });
+          </script>
         </div>
         <button class="botao col-2">Solicitar orçamento</button>
       </div>
