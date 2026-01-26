@@ -36,7 +36,8 @@
   position: absolute;
 }
 
-.header-menu a:hover:after {
+.header-menu a:hover:after,
+.header-menu a.ativo::after {
   /*serve para definir a transicao da animacao ao mexer do mouse*/
   width: 100%;
 }
