@@ -2,9 +2,9 @@
 const links = document.querySelectorAll(".header-menu a");
 
 function ativarLink(link) {
-  const url = location.href;
-  const href = link.href;
-  if (url.includes(href)) {
+  const url = location.pathname;
+  const href = link.pathname;
+  if (url === href) {
     link.classList.add("ativo");
   }
 }
